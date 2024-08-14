@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Primeiro PHP</title>
-        <meta charset="UTF-8">
-    </head>
 
-    <body>
-        <h1>Contato:</h1>    
+<head>
+    <title>Primeiro PHP</title>
+    <meta charset="UTF-8">
+</head>
 
-        <form action="mostrar_contato.php" method="get">
+<body>
+    <h1>Contato:</h1>
 
+    <form action="mostrar_contato.php" method="get">
+        <fieldset>
+            <legend>Dados pessoais</legend>
             <label for="nome">nome: </label>
             <input type="text" name="nome" id="nome">
-            
+
             <br><br>
 
             <label for="sobrenome">sobrenome: </label>
@@ -20,8 +22,15 @@
 
             <br><br>
 
-            <input type="submit" value="enviar">
+            <label for="cpf">CPF: </label>
+            <input type="text" name="cpf" id="cpf">
 
-        </form>
-    </body>
+            <br><br>
+
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </fieldset>
+    </form>
+</body>
+
 </html>

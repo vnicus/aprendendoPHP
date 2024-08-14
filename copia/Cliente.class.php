@@ -6,11 +6,10 @@
         //public é paremetro para visibilidade do atributo no codigo
         //string é o tipo do atributo
         //todo atributo começa com $
-
-        public function __construct( //__construct é gerar um construtor personalizado
-        public string $nome = "",
-        public string $sobrenome = "",
-        public string $cpf = ""){}
+        
+        public string $nome;
+        public string $sobrenome;
+        public string $cpf;
 
         //metodos
         public function inserir()
