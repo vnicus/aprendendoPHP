@@ -18,7 +18,8 @@ if($_GET == true) //valida se o formulario foi respodido, se é true
 
     $msg = $obj -> inserir($conect);
 
-    echo $msg;
+    header("location:index.php?msg=$msg"); //apos o registro do cliente, será redirecionada para o index.php + $msg
+    die(); //boa pratica, o 'die' encerra de forma forçada a função
 
 
     // $obj -> nome = $_GET["nome"];
@@ -44,6 +45,6 @@ if($_GET == true) //valida se o formulario foi respodido, se é true
 else
 {
     //redirencionar o user para pagina index.html novamente caso get não tenha conteudo
-    header("location:index.html");
+    header("location:form_Cliente.html");
 }
 ?>

@@ -26,7 +26,7 @@
 
             $stm -> execute();
 
-            return "Cliente Registrado com sucesso!";
+            return "Cliente registrado com sucesso!";
         }
 
 
@@ -41,6 +41,19 @@
 
             //retornando a conexão aberta
             return $conexao;
+
+        }
+
+        public function buscar_todos_cliente($conexao){
+            
+            $sql = "SELECT * FROM cliente"; // Selecionando todos o itens na tabela cliente
+           
+            $stm = $conexao -> prepare($sql); //prepara a frase
+            $stm -> execute();
+
+            return $stm -> fetchAll(PDO::FETCH_OBJ); 
+            //FETCH_NUM e FETCH_ASSOC
+            
 
         }
     }//fim da classe cliente
