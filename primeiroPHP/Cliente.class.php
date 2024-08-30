@@ -53,7 +53,6 @@
 
             return $stm -> fetchAll(PDO::FETCH_OBJ); 
             //FETCH_NUM e FETCH_ASSOC
-            
 
         }
     }//fim da classe cliente

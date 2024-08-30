@@ -13,7 +13,7 @@ if($_GET == true) //valida se o formulario foi respodido, se é true
     $obj = new Cliente (nome:$_GET["nome"], sobrenome:$_GET["sobrenome"], cpf:$_GET["cpf"]); 
     //-> dessa forma é mais simple e preenche os var de acordo com a expecificação antes dos ":"
 
-    //abrir conexão com o BD
+    //abrir conexão com o Banco de Dados
     $conect = $obj -> conexao();
 
     $msg = $obj -> inserir($conect);
@@ -44,7 +44,7 @@ if($_GET == true) //valida se o formulario foi respodido, se é true
 }
 else
 {
-    //redirencionar o user para pagina index.html novamente caso get não tenha conteudo
+    //redirencionar o user para pagina form_Cliente.html novamente caso get não tenha conteudo, seja = false
     header("location:form_Cliente.html");
 }
 ?>
