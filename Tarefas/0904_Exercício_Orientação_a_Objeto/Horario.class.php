@@ -6,6 +6,8 @@ class Horario
         private string $hora = ""
     ) {}
 
+
+    //Gets Setters
     public function getData()
     {
         return $this->data;
@@ -23,4 +25,4 @@ class Horario
     {
         $this->hora = $hora;
     }
-}
+}//Fim classe
