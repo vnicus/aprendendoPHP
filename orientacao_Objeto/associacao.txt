@@ -1,0 +1,5 @@
+- Agregação é representado por um losangolo sem preenchimento, relacionamento fraco
+
+- composição, simbolo losangolo pintado, relacionamente forte
+
+- impolementação, 

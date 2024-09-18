@@ -1,0 +1,29 @@
+<?php
+class Categoria
+{
+    public function __construct(
+        private string $descritivo = "",
+        private array $produto = array(),
+    ) {
+    }
+
+    //Get e Set
+    public function getDescritivo()
+    {
+        return $this->descritivo;
+    }
+    public function setDescritivo($descritivo)
+    {
+        $this->descritivo = $descritivo;
+    }
+
+    public function getProduto()
+    {
+        return $this->produto;
+    }
+    public function setProduto(Produto $produto)
+    {
+        $this->produto[] = $produto;
+    }
+}
+?>

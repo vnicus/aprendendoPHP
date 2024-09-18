@@ -6,9 +6,7 @@ class Produto
         private string $descricao = "",
         private float $preco = 0.00,
         private int $estoque = 0,
-
-        //associação com a classe Fornecedor
-        private array $fornecedor = array()
+        private $categoria = null,
     ) {
     }
 
@@ -49,14 +47,12 @@ class Produto
         $this->estoque = $estoque;
     }
 
-    public function getFornecedor()
-    {
-        return $this->fornecedor;
+    public function getCategoria(){
+        return $this->categoria;
     }
-    public function setFornecedor(Fornecedor $fornecedor)
-    {
-        //para chamar um atribo do tipo array deve colocar o []
-        $this->fornecedor[] = $fornecedor;
+    public function setCategoria(Categoria $categoria){
+        $this->categoria = $categoria;
     }
+
 }
 ?>
